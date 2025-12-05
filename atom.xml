@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="https://williamllk-ai.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://williamllk-ai.github.io/"/>
+  <updated>2025-12-05T02:02:55.650Z</updated>
+  <id>https://williamllk-ai.github.io/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Self-Introduction</title>
+    <link href="https://williamllk-ai.github.io/2025/12/04/Self-Introduction/"/>
+    <id>https://williamllk-ai.github.io/2025/12/04/Self-Introduction/</id>
+    <published>2025-12-04T12:00:00.000Z</published>
+    <updated>2025-12-05T02:02:55.650Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="who-am-i"><a class="markdownIt-Anchor" href="#who-am-i">#</a> Who am I?</h1><ul><li>SJTU - IEEE 试点班</li><li>大一在读</li><li>自学 CS 进行中</li></ul><h1 id="what-is-in-the-blog"><a class="markdownIt-Anchor" href="#what-is-in-the-blog">#</a> What is in the Blog?</h1><h2 id="life"><a class="markdownIt-Anchor" href="#life">#</a> Life</h2><ul><li>生活随记</li><li>读书笔记</li></ul><h2 id="academic-contents"><a class="markdownIt-Anchor" href="#academic-contents">#</a> Academic Contents</h2><h3 id="cs知识总结-or-刷题笔记"><a class="markdownIt-Anchor" href="#cs知识总结-or-刷题笔记">#</a> CS（知识总结 or 刷题笔记）</h3><ul><li>Algorithm：算法</li><li>Data Structure：数据结构</li><li>… (To be Learned)</li></ul><h3 id="automation-research-oriented"><a class="markdownIt-Anchor" href="#automation-research-oriented">#</a> Automation (Research-Oriented)</h3><ul><li>SLAM：Simultaneous Localization and Mapping</li><li>… (To be learned)</li></ul><h1 id="personal-accounts"><a class="markdownIt-Anchor" href="#personal-accounts">#</a> Personal Accounts</h1><h2 id="email"><a class="markdownIt-Anchor" href="#email">#</a> Email</h2><ul><li><a href="mailto:william60kun@gmail.com">william60kun@gmail.com</a></li><li><a href="mailto:williamllk@sjtu.edu.cn">williamllk@sjtu.edu.cn</a></li></ul><h2 id="other-accounts"><a class="markdownIt-Anchor" href="#other-accounts">#</a> Other Accounts</h2><ul><li><a href="https://github.com/williamllk-ai">GitHub - williamllk-ai</a></li><li><a href="https://space.bilibili.com/497010529?spm_id_from=333.1007.0.0">Bilibili</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;who-am-i&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#who-am-i&quot;&gt;#&lt;/a&gt; Who am I?&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;SJTU - IEEE 试点班&lt;/li&gt;
+&lt;li&gt;大一在读&lt;/li&gt;
+&lt;li&gt;自学 CS 进</summary>
+      
+    
+    
+    
+    
+    <category term="Life" scheme="https://williamllk-ai.github.io/tags/Life/"/>
+    
+  </entry>
+  
+</feed>
