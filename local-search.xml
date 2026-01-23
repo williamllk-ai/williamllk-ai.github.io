@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2026/01/23/hello-world/"/>
+    <url>/2026/01/23/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>SLAM LECTURE 1</title>
+    <link href="/2026/01/23/SLAM-LECTURE-1/"/>
+    <url>/2026/01/23/SLAM-LECTURE-1/</url>
+    
+    <content type="html"><![CDATA[<h1 id="L1自测题-知识补充"><a href="#L1自测题-知识补充" class="headerlink" title="L1自测题-知识补充"></a>L1自测题-知识补充</h1><h2 id="数学-Gaussian-Distribution"><a href="#数学-Gaussian-Distribution" class="headerlink" title="数学-Gaussian Distribution"></a>数学-Gaussian Distribution</h2><h3 id="一维-正态分布"><a href="#一维-正态分布" class="headerlink" title="一维 (正态分布)"></a>一维 (正态分布)</h3><p>$$ p(x) &#x3D; \frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}} $$</p><ul><li>$\mu$为期望&#x2F;均值</li><li>$\sigma$为标准差</li></ul><h3 id="高维：状态向量为-boldsymbol-x"><a href="#高维：状态向量为-boldsymbol-x" class="headerlink" title="高维：状态向量为$\boldsymbol{x}$"></a>高维：状态向量为$\boldsymbol{x}$</h3><p>$$ p(\boldsymbol{x}) &#x3D; \frac{1}{\sqrt{(2\pi)^N\det(\boldsymbol{\Sigma})}}e^{-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^\top\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu})} $$</p><ul><li><p>$ \boldsymbol{\Sigma} &#x3D; \mathbb{E}[(\boldsymbol{x}-\boldsymbol{\mu})(\boldsymbol{x}-\boldsymbol{\mu})^\top] $：协方差矩阵（对称、半正定）</p></li><li><p>$ D^2 &#x3D;  (\boldsymbol{x}-\boldsymbol{\mu})^\top\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu}) $：马哈拉诺比斯距离（考虑了不确定性）</p></li></ul><h2 id="Linux补充"><a href="#Linux补充" class="headerlink" title="Linux补充"></a>Linux补充</h2><ul><li><p>安装：<code>sudo apt install &lt;&gt;</code></p></li><li><p>查询：<code>sudo apt search &lt;&gt;</code> </p></li><li><p>安装地址：</p><table><thead><tr><th>类型</th><th>位置</th></tr></thead><tbody><tr><td>可执行程序</td><td><code>/usr/bin/</code></td></tr><tr><td>系统库</td><td><code>/usr/lib/</code></td></tr><tr><td>头文件</td><td><code>/usr/include/</code></td></tr><tr><td>第三方库（Eigen、OpenCV）</td><td><code>/usr/include/xxx</code></td></tr><tr><td>本地手动安装</td><td><code>/usr/local/</code></td></tr></tbody></table></li><li><p>Vim</p></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>SLAM</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Self-Introduction</title>
+    <link href="/2025/12/04/Self-Introduction/"/>
+    <url>/2025/12/04/Self-Introduction/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Who-am-I"><a href="#Who-am-I" class="headerlink" title="Who am I?"></a>Who am I?</h1><ul><li>SJTU - IEEE 试点班  </li><li>大一在读  </li><li>自学 CS 进行中</li></ul><h1 id="What-is-in-the-Blog"><a href="#What-is-in-the-Blog" class="headerlink" title="What is in the Blog?"></a>What is in the Blog?</h1><h2 id="Life"><a href="#Life" class="headerlink" title="Life"></a>Life</h2><ul><li>生活随记</li><li>读书笔记</li></ul><h2 id="Academic-Contents"><a href="#Academic-Contents" class="headerlink" title="Academic Contents"></a>Academic Contents</h2><h3 id="CS（知识总结-or-刷题笔记）"><a href="#CS（知识总结-or-刷题笔记）" class="headerlink" title="CS（知识总结 or 刷题笔记）"></a>CS（知识总结 or 刷题笔记）</h3><ul><li>Algorithm：算法</li><li>Data Structure：数据结构</li><li>… (To be Learned)</li></ul><h3 id="Automation-Research-Oriented"><a href="#Automation-Research-Oriented" class="headerlink" title="Automation (Research-Oriented)"></a>Automation (Research-Oriented)</h3><ul><li>SLAM：Simultaneous Localization and Mapping</li><li>… (To be learned)</li></ul><h1 id="Personal-Accounts"><a href="#Personal-Accounts" class="headerlink" title="Personal Accounts"></a>Personal Accounts</h1><h2 id="Email"><a href="#Email" class="headerlink" title="Email"></a>Email</h2><ul><li><a href="mailto:&#x77;&#x69;&#x6c;&#108;&#105;&#x61;&#109;&#x36;&#48;&#x6b;&#x75;&#110;&#64;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">william60kun@gmail.com</a></li><li><a href="mailto:&#119;&#105;&#108;&#x6c;&#105;&#x61;&#x6d;&#108;&#x6c;&#x6b;&#64;&#115;&#106;&#116;&#117;&#46;&#101;&#x64;&#117;&#46;&#x63;&#110;">williamllk@sjtu.edu.cn</a></li></ul><h2 id="Other-Accounts"><a href="#Other-Accounts" class="headerlink" title="Other Accounts"></a>Other Accounts</h2><ul><li><a href="https://github.com/williamllk-ai">GitHub - williamllk-ai</a></li><li><a href="https://space.bilibili.com/497010529?spm_id_from=333.1007.0.0">Bilibili</a></li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Life</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
