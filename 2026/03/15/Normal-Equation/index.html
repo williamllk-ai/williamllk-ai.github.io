@@ -19,22 +19,21 @@
   <meta name="author" content="William Lu/Linkun Lu">
   <meta name="keywords" content="">
   
-    <meta name="description" content="二叉树">
+    <meta name="description" content="正规方程的推导 正规方程的推导可以从两个角度理解：一个是几何上的投影，一个是代数上的求导。下面我们从投影的角度出发，展示如何从 (A\mathbf{x} &#x3D; \mathbf{b}) 得到正规方程 (A^T A \mathbf{x} &#x3D; A^T \mathbf{b})。  §1. 问题背景 我们有一个线性系统： [ A \mathbf{x} &#x3D; \mathbf{b} ] 其中 (A) 是一个 (m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ch.02 Basic Data Structures Else for Binary Tree">
-<meta property="og:url" content="http://example.com/2026/03/02/Basic-Data-Structure-Else/index.html">
+<meta property="og:title" content="Normal Equation">
+<meta property="og:url" content="http://example.com/2026/03/15/Normal-Equation/index.html">
 <meta property="og:site_name" content="William Lu的博客">
-<meta property="og:description" content="二叉树">
+<meta property="og:description" content="正规方程的推导 正规方程的推导可以从两个角度理解：一个是几何上的投影，一个是代数上的求导。下面我们从投影的角度出发，展示如何从 (A\mathbf{x} &#x3D; \mathbf{b}) 得到正规方程 (A^T A \mathbf{x} &#x3D; A^T \mathbf{b})。  §1. 问题背景 我们有一个线性系统： [ A \mathbf{x} &#x3D; \mathbf{b} ] 其中 (A) 是一个 (m">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-03-02T02:00:29.000Z">
-<meta property="article:modified_time" content="2026-03-02T02:01:50.443Z">
+<meta property="article:published_time" content="2026-03-15T07:10:27.000Z">
+<meta property="article:modified_time" content="2026-03-15T07:11:10.188Z">
 <meta property="article:author" content="William Lu&#x2F;Linkun Lu">
-<meta property="article:tag" content="ALGO">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Ch.02 Basic Data Structures Else for Binary Tree - William Lu的博客</title>
+  <title>Normal Equation - William Lu的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Ch.02 Basic Data Structures Else for Binary Tree"></span>
+            <span id="subtitle" data-typed-text="Normal Equation"></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-03-02 10:00" pubdate>
-          2026年3月2日 上午
+        <time datetime="2026-03-15 15:10" pubdate>
+          2026年3月15日 下午
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3 字
+          763 字
         
       </span>
     
@@ -234,7 +233,7 @@
         
         
         
-          1 分钟
+          7 分钟
         
       </span>
     
@@ -271,12 +270,61 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Ch.02 Basic Data Structures Else for Binary Tree</h1>
+            <h1 id="seo-header">Normal Equation</h1>
             
             
               <div class="markdown-body">
                 
-                <h1>二叉树</h1>
+                <h1>正规方程的推导</h1>
+<p>正规方程的推导可以从两个角度理解：一个是几何上的投影，一个是代数上的求导。下面我们从投影的角度出发，展示如何从 (A\mathbf{x} = \mathbf{b}) 得到正规方程 (A^T A \mathbf{x} = A^T \mathbf{b})。</p>
+<hr>
+<h3 id="1-问题背景"><a class="header-anchor" href="#1-问题背景">§</a>1. 问题背景</h3>
+<p>我们有一个线性系统：<br>
+[<br>
+A \mathbf{x} = \mathbf{b}<br>
+]<br>
+其中 (A) 是一个 (m \times n) 的矩阵（通常 (m &gt; n)），(\mathbf{b}) 是一个 (m) 维观测向量，(\mathbf{x}) 是 (n) 维未知参数向量。由于方程个数多于未知数个数，方程组通常是<strong>超定</strong>的，没有精确解，即 (\mathbf{b}) 不在 (A) 的列空间中。</p>
+<p>最小二乘法的目标：寻找一个 (\hat{\mathbf{x}})，使得 (A\hat{\mathbf{x}}) 尽可能接近 (\mathbf{b})，即最小化残差 (|\mathbf{b} - A\mathbf{x}|^2)。</p>
+<h3 id="2-投影的几何解释"><a class="header-anchor" href="#2-投影的几何解释">§</a>2. 投影的几何解释</h3>
+<p>矩阵 (A) 的列向量张成一个 (n) 维子空间，称为<strong>列空间</strong> (\mathcal{C}(A))。对于任意 (\mathbf{x})，(A\mathbf{x}) 就是该空间中的一个向量。</p>
+<p>我们希望在这个子空间中找到一点 (\mathbf{p} = A\hat{\mathbf{x}})，使得它到 (\mathbf{b}) 的距离最短。根据欧几里得空间中的正交投影定理，这个最短距离点就是 (\mathbf{b}) 在列空间上的<strong>正交投影</strong>。</p>
+<p>记投影为 (\mathbf{p})，那么残差向量 (\mathbf{r} = \mathbf{b} - \mathbf{p}) 必须垂直于列空间 (\mathcal{C}(A))。也就是说，(\mathbf{r}) 与 (A) 的每一个列向量都正交。</p>
+<h3 id="3-用正交条件推导方程"><a class="header-anchor" href="#3-用正交条件推导方程">§</a>3. 用正交条件推导方程</h3>
+<p>设 (A) 的列向量为 (\mathbf{a}_1, \mathbf{a}_2, \dots, \mathbf{a}_n)。正交条件意味着：<br>
+[<br>
+\mathbf{a}_j^T (\mathbf{b} - A\hat{\mathbf{x}}) = 0, \quad j = 1,2,\dots,n.<br>
+]<br>
+将这 (n) 个等式合并成矩阵形式：<br>
+[<br>
+A^T (\mathbf{b} - A\hat{\mathbf{x}}) = \mathbf{0}.<br>
+]<br>
+移项即得：<br>
+[<br>
+A^T A \hat{\mathbf{x}} = A^T \mathbf{b}.<br>
+]<br>
+这就是<strong>正规方程</strong>。</p>
+<h3 id="4-代数推导（求导）作为印证"><a class="header-anchor" href="#4-代数推导（求导）作为印证">§</a>4. 代数推导（求导）作为印证</h3>
+<p>也可以从最小化误差平方和的角度推导。定义目标函数：<br>
+[<br>
+f(\mathbf{x}) = | A\mathbf{x} - \mathbf{b} |^2 = (A\mathbf{x} - \mathbf{b})^T (A\mathbf{x} - \mathbf{b}).<br>
+]<br>
+展开：<br>
+[<br>
+f(\mathbf{x}) = \mathbf{x}^T A^T A \mathbf{x} - 2 \mathbf{b}^T A \mathbf{x} + \mathbf{b}^T \mathbf{b}.<br>
+]<br>
+对 (\mathbf{x}) 求梯度并令其为零：<br>
+[<br>
+\nabla f(\mathbf{x}) = 2 A^T A \mathbf{x} - 2 A^T \mathbf{b} = \mathbf{0},<br>
+]<br>
+同样得到 (A^T A \mathbf{x} = A^T \mathbf{b})。</p>
+<h3 id="5-解的存在性与唯一性"><a class="header-anchor" href="#5-解的存在性与唯一性">§</a>5. 解的存在性与唯一性</h3>
+<p>正规方程的解 (\hat{\mathbf{x}}) 就是最小二乘估计。当 (A) 列满秩时，(A^T A) 是可逆矩阵，解唯一：<br>
+[<br>
+\hat{\mathbf{x}} = (A^T A)^{-1} A^T \mathbf{b}.<br>
+]<br>
+此时投影向量 (\mathbf{p} = A \hat{\mathbf{x}} = A (A^T A)^{-1} A^T \mathbf{b})，而矩阵 (P = A (A^T A)^{-1} A^T) 就是到列空间上的投影矩阵。</p>
+<h3 id="总结"><a class="header-anchor" href="#总结">§</a>总结</h3>
+<p>从 (A\mathbf{x} = \mathbf{b}) 出发，利用<strong>残差与列空间正交</strong>这一几何条件，自然导出了正规方程 (A^T A \mathbf{x} = A^T \mathbf{b})。它将一个无解的方程组转化为一个有唯一解（在列满秩下）的线性方程组，从而得到最优的近似解。</p>
 
                 
               </div>
@@ -286,13 +334,6 @@
               <div class="post-metas my-3">
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/ALGO/" class="print-no-link">#ALGO</a>
-      
-    </div>
-  
 </div>
 
 
@@ -301,8 +342,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Ch.02 Basic Data Structures Else for Binary Tree</div>
-      <div>http://example.com/2026/03/02/Basic-Data-Structure-Else/</div>
+      <div>Normal Equation</div>
+      <div>http://example.com/2026/03/15/Normal-Equation/</div>
     </div>
     <div class="license-meta">
       
@@ -314,7 +355,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2026年3月2日</div>
+          <div>2026年3月15日</div>
         </div>
       
       
@@ -346,18 +387,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2026/03/15/Normal-Equation/" title="Normal Equation">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Normal Equation</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2026/02/27/Graph-Problems/" title="Ch.03 图上树上问题">
-                        <span class="hidden-mobile">Ch.03 图上树上问题</span>
+                      <a href="/2026/03/02/Basic-Data-Structure-Else/" title="Ch.02 Basic Data Structures Else for Binary Tree">
+                        <span class="hidden-mobile">Ch.02 Basic Data Structures Else for Binary Tree</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
